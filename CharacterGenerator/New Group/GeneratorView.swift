@@ -42,42 +42,46 @@ struct GeneratorView: View {
                 }
                     
                 //Table
-                
-                
                 Group {
                       
                     VStack {
                         FullTableRowView(text: "Player: ")
-                            
+                        Divider()
                         FullTableRowView(text: "Name: ")
-     
+                        Divider()
                         
-                        
-                        HStack {
-                            FullTableRowView(text: "Occuparion:")
+                        Group {
                             
-                            FullTableRowView(text: "Era: ")
-                        }
-                        
-                        HStack {
-                            FullTableRowView(text: "Age:")
+                            HStack {
+                                FullTableRowView(text: "Occupation:")
+                                Divider()
+                                FullTableRowView(text: "Era: ")
+                            }
+                            Divider()
                             
-                            FullTableRowView(text: "Sex: ")
+                            HStack {
+                                FullTableRowView(text: "Age:")
+                                Divider()
+                                FullTableRowView(text: "Sex: ")
+                                
+                            }
+                            Divider()
                         }
-                        
+                       
                         FullTableRowView(text: "Residence: ")
-                        
+                        Divider()
                         FullTableRowView(text: "Birthplace: ")
                     }
                     
                     .padding(.all, 10.0)
+                    
                     
                     .background (
                         RoundedRectangle(cornerRadius: 5.8)
                             .foregroundColor(Color("TableBackground"))
                         )
                     
-                    .padding(.all, 10.0)
+                    .padding(.horizontal, 20.0)
                 }
                 
                 

@@ -20,7 +20,9 @@ struct FullTableRowView: View {
             
             Spacer()
         }
-//        .padding(.horizontal, 5.0)
+        
+        
+//        .padding(.horizontal, 10.0)
 //        .border(Color.gray)
     }
 }
