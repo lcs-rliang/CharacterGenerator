@@ -9,9 +9,15 @@ import SwiftUI
 
 struct GeneratorView: View {
     //MARK: Stored Properties
-    
-    
-    
+    let player: String
+    let name: String
+    let occupation: String
+    let era: String
+    let age: String
+    let sex: String
+    let Residence: String
+    let Birthplace: String
+
     //MARK: Computed properties
     
     
@@ -26,7 +32,7 @@ struct GeneratorView: View {
             VStack{
                 
                 
-                //Title
+                //MARK: 1st title
                 Group {
                     
                     HStack {
@@ -41,7 +47,7 @@ struct GeneratorView: View {
 
                 }
                     
-                //Table
+                //MARK: 1st table
                 Group {
                       
                     VStack {
@@ -77,14 +83,63 @@ struct GeneratorView: View {
                     
                     
                     .background (
-                        RoundedRectangle(cornerRadius: 5.8)
+                        RoundedRectangle(cornerRadius: 10.0)
                             .foregroundColor(Color("TableBackground"))
                         )
-                    
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .stroke(Color("TableBorder"), lineWidth: 2)
+                        )
                     .padding(.horizontal, 20.0)
                 }
                 
+                Spacer()
                 
+                //MARK: 2nd title
+                Group {
+                    HStack {
+                        
+                        Text ("Characteristics")
+                            .font(.system(size: 25))
+                            .bold()
+                        
+                        Spacer()
+                    }
+                    .padding ([.top, .leading, .bottom], 20.0)
+
+                }
+                
+                //MARK: 2nd table
+                Group {
+                    VStack {
+                        CharacteristicRowView(characteristic: "STR",
+                                               characteristic2: "EDU")
+                        
+                        CharacteristicRowView(characteristic: "STR",
+                                               characteristic2: "EDU")
+                        
+                        CharacteristicRowView(characteristic: "STR",
+                                               characteristic2: "EDU")
+                        
+                        CharacteristicRowView(characteristic: "STR",
+                                               characteristic2: "EDU")
+                        
+                        CharacteristicRowView(characteristic: "STR",
+                                               characteristic2: "EDU")
+                        
+                    }
+                    
+                    .padding(.all, 10.0)
+                }
+                .background (
+                    RoundedRectangle(cornerRadius: 10.0)
+                        .foregroundColor(Color("TableBackground"))
+                    )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10.0)
+                        .stroke(Color("TableBorder"), lineWidth: 2)
+                    )
+                .padding(.horizontal, 20.0)
         }
         
            
@@ -96,7 +151,14 @@ struct GeneratorView: View {
 
 struct GeneratorView_Previews: PreviewProvider {
     static var previews: some View {
-        GeneratorView()
+        GeneratorView(player: "Harvey Walter",
+                      name: "Chaosium",
+                      occupation: "Writer",
+                      era: "1920s",
+                      age: "42",
+                      sex: "Male",
+                      Residence: "New Jersey",
+                      Birthplace: "Louisiana")
             .preferredColorScheme(.dark)
     }
 }
