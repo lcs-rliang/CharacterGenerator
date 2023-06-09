@@ -14,6 +14,7 @@
 		4C9ACD572A29195800E3B737 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9ACD562A29195800E3B737 /* GeneratorView.swift */; };
 		4C9ACD592A29255600E3B737 /* FullTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9ACD582A29255600E3B737 /* FullTableRowView.swift */; };
 		4CB929A52A296A05002C2EC8 /* CharacteristicRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB929A42A296A05002C2EC8 /* CharacteristicRowView.swift */; };
+		4CCB27262A32A8A800D06C9F /* CharacteristicRowView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB27252A32A8A800D06C9F /* CharacteristicRowView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4C9ACD562A29195800E3B737 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
 		4C9ACD582A29255600E3B737 /* FullTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTableRowView.swift; sourceTree = "<group>"; };
 		4CB929A42A296A05002C2EC8 /* CharacteristicRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicRowView.swift; sourceTree = "<group>"; };
+		4CCB27252A32A8A800D06C9F /* CharacteristicRowView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicRowView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				4C9ACD562A29195800E3B737 /* GeneratorView.swift */,
 				4C9ACD582A29255600E3B737 /* FullTableRowView.swift */,
 				4CB929A42A296A05002C2EC8 /* CharacteristicRowView.swift */,
+				4CCB27252A32A8A800D06C9F /* CharacteristicRowView2.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9ACD572A29195800E3B737 /* GeneratorView.swift in Sources */,
+				4CCB27262A32A8A800D06C9F /* CharacteristicRowView2.swift in Sources */,
 				4C9ACD552A29192500E3B737 /* HomeView.swift in Sources */,
 				4C9ACD462A2918E900E3B737 /* CharacterGeneratorApp.swift in Sources */,
 				4C9ACD592A29255600E3B737 /* FullTableRowView.swift in Sources */,

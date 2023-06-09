@@ -36,7 +36,7 @@ struct FullTableRowView: View {
             HStack {
                 
                 Text(text)
-                    .font(.system)
+//                   5 .font(.system(size: 13))
                     .padding(.all, 10.0)
                 
                 Spacer()

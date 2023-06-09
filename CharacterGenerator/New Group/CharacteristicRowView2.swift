@@ -1,17 +1,16 @@
 //
-//  CharacerCellView.swift
+//  CharacteristicRowView2.swift
 //  CharacterGenerator
 //
-//  Created by dyhidrogen monoxide on 2023/6/1.
+//  Created by dyhidrogen monoxide on 2023/6/8.
 //
 
 import SwiftUI
 
-struct CharacteristicRowView: View {
-    
+struct CharacteristicRowView2: View {
     let characteristic: String
-    let characteristic2: String
     
+    let text: String
     
     var body: some View {
         
@@ -21,9 +20,9 @@ struct CharacteristicRowView: View {
                 
                 
                 Text(characteristic)
-                    .font(.system(size: 12.14))
+                    .font(.system(size: 13))
 //                    .frame(width: 30.0)
-                    .padding(.all, 5.0)
+                    .padding(.all, 11)
                     .frame(width: 40.0)
             
                 Divider()
@@ -56,7 +55,7 @@ struct CharacteristicRowView: View {
             HStack {
                 
                 
-                Text(characteristic2)
+                Text(text)
                     .font(.system(size: 12.14))
 //                    .frame(width: 30.0)
                     .padding(.all, 5.0)
@@ -89,16 +88,12 @@ struct CharacteristicRowView: View {
             
 
         }
-//        .frame(width: 400.0, height: 50.0)
-      
-      
-        
     }
 }
 
-struct CharacerRowView_Previews: PreviewProvider {
+struct CharacteristicRowView2_Previews: PreviewProvider {
     static var previews: some View {
-        CharacteristicRowView(characteristic: "STR",
-                               characteristic2: "EDU")
+        CharacteristicRowView2(characteristic: "LUCK",
+                               text: "Point Used")
     }
 }

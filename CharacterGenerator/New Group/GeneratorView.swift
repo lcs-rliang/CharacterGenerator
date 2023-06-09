@@ -32,7 +32,7 @@ struct GeneratorView: View {
             VStack{
                 
                 
-                //MARK: 1st title
+                //1st title
                 Group {
                     
                     HStack {
@@ -47,7 +47,7 @@ struct GeneratorView: View {
 
                 }
                     
-                //MARK: 1st table
+                //1st table
                 Group {
                       
                     VStack {
@@ -95,7 +95,7 @@ struct GeneratorView: View {
                 
                 Spacer()
                 
-                //MARK: 2nd title
+                //2nd title
                 Group {
                     HStack {
                         
@@ -109,26 +109,35 @@ struct GeneratorView: View {
 
                 }
                 
-                //MARK: 2nd table
+                //2nd table
                 Group {
                     VStack {
                         CharacteristicRowView(characteristic: "STR",
-                                               characteristic2: "EDU")
+                                               characteristic2: "DEX")
                         
-                        CharacteristicRowView(characteristic: "STR",
-                                               characteristic2: "EDU")
+                        Divider()
                         
-                        CharacteristicRowView(characteristic: "STR",
-                                               characteristic2: "EDU")
+                        CharacteristicRowView(characteristic: "CON",
+                                               characteristic2: "SIZ")
                         
-                        CharacteristicRowView(characteristic: "STR",
-                                               characteristic2: "EDU")
+                        Divider()
                         
-                        CharacteristicRowView(characteristic: "STR",
-                                               characteristic2: "EDU")
+                        CharacteristicRowView(characteristic: "APP",
+                                               characteristic2: "INT")
+                        
+                        Divider()
+                        
+                        CharacteristicRowView(characteristic: "EDU",
+                                               characteristic2: "POW")
+                        
+                        Divider()
+                        
+                        CharacteristicRowView2(characteristic: "LUCK",
+                                               text: "Point Used")
                         
                     }
-                    
+                    .padding(.all, 10.0)
+                    .border(Color("TableBorder2"))
                     .padding(.all, 10.0)
                 }
                 .background (
