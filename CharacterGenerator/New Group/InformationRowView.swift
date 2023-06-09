@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FullTableRowView: View {
+struct InformationRowView: View {
     
     //MARK: Stored Properties
     
@@ -51,8 +51,8 @@ struct FullTableRowView: View {
     }
 }
 
-struct FullTableRowView_Previews: PreviewProvider {
+struct InformationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        FullTableRowView(text: "Name: ")
+        InformationRowView(text: "Name: ")
     }
 }

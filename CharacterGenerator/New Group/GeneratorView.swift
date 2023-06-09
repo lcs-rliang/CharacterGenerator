@@ -17,7 +17,7 @@ struct GeneratorView: View {
     let sex: String
     let Residence: String
     let Birthplace: String
-
+    
     //MARK: Computed properties
     
     
@@ -32,51 +32,39 @@ struct GeneratorView: View {
             VStack{
                 
                 
-                //1st title
+                
+                TitleVIew(title: "Investigator Information")
+                
+                
                 Group {
                     
-                    HStack {
-                        
-                        Text ("Investigator Information")
-                            .font(.system(size: 25))
-                            .bold()
-                        
-                        Spacer()
-                    }
-                    .padding ([.leading, .bottom], 20.0)
-
-                }
-                    
-                //1st table
-                Group {
-                      
                     VStack {
-                        FullTableRowView(text: "Player: ")
+                        InformationRowView(text: "Player: ")
                         Divider()
-                        FullTableRowView(text: "Name: ")
+                        InformationRowView(text: "Name: ")
                         Divider()
                         
                         Group {
                             
                             HStack {
-                                FullTableRowView(text: "Occupation:")
+                                InformationRowView(text: "Occupation:")
                                 Divider()
-                                FullTableRowView(text: "Era: ")
+                                InformationRowView(text: "Era: ")
                             }
                             Divider()
                             
                             HStack {
-                                FullTableRowView(text: "Age:")
+                                InformationRowView(text: "Age:")
                                 Divider()
-                                FullTableRowView(text: "Sex: ")
+                                InformationRowView(text: "Sex: ")
                                 
                             }
                             Divider()
                         }
-                       
-                        FullTableRowView(text: "Residence: ")
+                        
+                        InformationRowView(text: "Residence: ")
                         Divider()
-                        FullTableRowView(text: "Birthplace: ")
+                        InformationRowView(text: "Birthplace: ")
                     }
                     
                     .padding(.all, 10.0)
@@ -85,50 +73,44 @@ struct GeneratorView: View {
                     .background (
                         RoundedRectangle(cornerRadius: 10.0)
                             .foregroundColor(Color("TableBackground"))
-                        )
+                    )
                     .overlay(
                         RoundedRectangle(cornerRadius: 10.0)
                             .stroke(Color("TableBorder"), lineWidth: 2)
-                        )
+                    )
                     .padding(.horizontal, 20.0)
                 }
                 
-                Spacer()
+            }
+            
+            
+            //MARK: Characteristics
+            VStack {
                 
                 //2nd title
-                Group {
-                    HStack {
-                        
-                        Text ("Characteristics")
-                            .font(.system(size: 25))
-                            .bold()
-                        
-                        Spacer()
-                    }
-                    .padding ([.top, .leading, .bottom], 20.0)
-
-                }
+                TitleVIew(title: "Characteristics")
+                
                 
                 //2nd table
                 Group {
                     VStack {
                         CharacteristicRowView(characteristic: "STR",
-                                               characteristic2: "DEX")
+                                              characteristic2: "DEX")
                         
                         Divider()
                         
                         CharacteristicRowView(characteristic: "CON",
-                                               characteristic2: "SIZ")
+                                              characteristic2: "SIZ")
                         
                         Divider()
                         
                         CharacteristicRowView(characteristic: "APP",
-                                               characteristic2: "INT")
+                                              characteristic2: "INT")
                         
                         Divider()
                         
                         CharacteristicRowView(characteristic: "EDU",
-                                               characteristic2: "POW")
+                                              characteristic2: "POW")
                         
                         Divider()
                         
@@ -138,22 +120,55 @@ struct GeneratorView: View {
                     }
                     .padding(.all, 10.0)
                     .border(Color("TableBorder2"))
-                    .padding(.all, 10.0)
+                    .padding(.all, 15.0)
+                    
+                    .background (
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .foregroundColor(Color("TableBackground"))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .stroke(Color("TableBorder"), lineWidth: 2)
+                    )
+                    .padding(.horizontal, 20.0)
                 }
-                .background (
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .foregroundColor(Color("TableBackground"))
-                    )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .stroke(Color("TableBorder"), lineWidth: 2)
-                    )
-                .padding(.horizontal, 20.0)
-        }
-        
-           
+            }
             
+            //MARK: Status
+            VStack {
                 
+                TitleVIew(title: "Status")
+                
+                Group {
+                    VStack {
+                        
+                        StatusRowView(status1: "HP:", status2: "MP:")
+                        
+                        Divider()
+                        
+                        StatusRowView(status1: "DB:", status2: "MOV:")
+                        
+                        Divider()
+                        
+                        SanityRowView(sanity: 90)
+                    }
+                    .padding(.all, 10.0)
+                    
+                    
+                    .background (
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .foregroundColor(Color("TableBackground"))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .stroke(Color("TableBorder"), lineWidth: 2)
+                    )
+                    .padding(.horizontal, 20.0)
+                    
+                    
+                }
+            }
+            
         }
     }
 }
@@ -168,6 +183,6 @@ struct GeneratorView_Previews: PreviewProvider {
                       sex: "Male",
                       Residence: "New Jersey",
                       Birthplace: "Louisiana")
-            .preferredColorScheme(.dark)
+        .preferredColorScheme(.dark)
     }
 }

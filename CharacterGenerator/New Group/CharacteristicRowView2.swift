@@ -63,27 +63,23 @@ struct CharacteristicRowView2: View {
             
                 Divider()
                 
-                Text("50")
-                    .font(.system(size: 13))
-                    .fontWeight(.light)
-//                    .frame(width: 30.0)
-                    .padding(.all, 5.0)
-                    .frame(width: 40.0)
-                Divider()
                 
-                VStack {
-                    Text ("25")
+                HStack {
+                    
+                    Spacer()
+                    
+                    Text("450")
                         .font(.system(size: 13))
                         .fontWeight(.light)
+    //                    .frame(width: 30.0)
+                        .padding(.all, 5.0)
+    //                    .frame(width: 40.0)
                     
-                    Divider()
-                    
-                    Text ("10")
-                        .font(.system(size: 13))
-                        .fontWeight(.light)
+                    Spacer()
                 }
-                    .padding(.all, 5.0)
-                    .frame(width: 40.0)
+                
+              
+                    
             }
             
 
