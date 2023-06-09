@@ -32,6 +32,6 @@ struct SanityRowView: View {
 
 struct SanityRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SanityRowView(sanity: 90)
+        SanityRowView(sanity: 0)
     }
 }

@@ -39,29 +39,30 @@ struct GeneratorView: View {
                 Group {
                     
                     VStack {
-                        InformationRowView(text: "Player: ")
+                        InformationRowView(text: "Player name: ")
                         Divider()
-                        InformationRowView(text: "Name: ")
+                        InformationRowView(text: "Character Name: ")
                         Divider()
                         
                         Group {
                             
                             HStack {
-                                InformationRowView(text: "Occupation:")
+                                InformationRowView(text: "Era:")
                                 Divider()
-                                InformationRowView(text: "Era: ")
+                                InformationRowView(text: "Age: ")
                             }
                             Divider()
                             
                             HStack {
-                                InformationRowView(text: "Age:")
+                                InformationRowView(text: "Sex:")
                                 Divider()
-                                InformationRowView(text: "Sex: ")
+                                InformationRowView(text: "Pronoun: ")
                                 
                             }
                             Divider()
                         }
-                        
+                        InformationRowView(text: "Occupation: ")
+                        Divider()
                         InformationRowView(text: "Residence: ")
                         Divider()
                         InformationRowView(text: "Birthplace: ")
@@ -87,50 +88,73 @@ struct GeneratorView: View {
             //MARK: Characteristics
             VStack {
                 
-                //2nd title
+               
                 TitleVIew(title: "Characteristics")
                 
                 
-                //2nd table
+               
                 Group {
+                    
                     VStack {
-                        CharacteristicRowView(characteristic: "STR",
-                                              characteristic2: "DEX")
-                        
-                        Divider()
-                        
-                        CharacteristicRowView(characteristic: "CON",
-                                              characteristic2: "SIZ")
-                        
-                        Divider()
-                        
-                        CharacteristicRowView(characteristic: "APP",
-                                              characteristic2: "INT")
-                        
-                        Divider()
-                        
-                        CharacteristicRowView(characteristic: "EDU",
-                                              characteristic2: "POW")
-                        
-                        Divider()
-                        
-                        CharacteristicRowView2(characteristic: "LUCK",
-                                               text: "Point Used")
+                        VStack {
+                            VStack {
+                                CharacteristicRowView(characteristic: "STR",
+                                                      characteristic2: "DEX")
+                                
+                                Divider()
+                                
+                                CharacteristicRowView(characteristic: "CON",
+                                                      characteristic2: "SIZ")
+                                
+                                Divider()
+                                
+                                CharacteristicRowView(characteristic: "APP",
+                                                      characteristic2: "INT")
+                                
+                                Divider()
+                                
+                                CharacteristicRowView(characteristic: "EDU",
+                                                      characteristic2: "POW")
+                                
+                                Divider()
+                                
+                                CharacteristicRowView2(characteristic: "LUCK",
+                                                       text: "Point Used")
+                            }
+                            .padding(.all, 10.0)
+                            .border(Color("TableBorder2"))
+                            .padding(.all, 15.0)
+                            
+                            
+                            //MARK: Button "GENERATE"
+                            VStack {
+                                Button(action: {
+                                    
+                                }, label: {
+                                    Text("Generate")
+                                        .foregroundColor(Color.white)
+                                        .font(.headline.smallCaps())
+                                })
+                                .buttonStyle(.bordered)
+                                
+                              
+                            }
+                            .padding(.bottom, 25.0)
+                            
+                            
+                        }
+                            .background (
+                                RoundedRectangle(cornerRadius: 10.0)
+                                    .foregroundColor(Color("TableBackground"))
+                            )
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10.0)
+                                    .stroke(Color("TableBorder"), lineWidth: 2)
+                            )
+                        .padding(.horizontal, 20.0)
                         
                     }
-                    .padding(.all, 10.0)
-                    .border(Color("TableBorder2"))
-                    .padding(.all, 15.0)
                     
-                    .background (
-                        RoundedRectangle(cornerRadius: 10.0)
-                            .foregroundColor(Color("TableBackground"))
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10.0)
-                            .stroke(Color("TableBorder"), lineWidth: 2)
-                    )
-                    .padding(.horizontal, 20.0)
                 }
             }
             
@@ -150,10 +174,11 @@ struct GeneratorView: View {
                         
                         Divider()
                         
-                        SanityRowView(sanity: 90)
+                        SanityRowView(sanity: 0)
                     }
                     .padding(.all, 10.0)
-                    
+                    .border(Color("TableBorder2"))
+                    .padding(.all, 15.0)
                     
                     .background (
                         RoundedRectangle(cornerRadius: 10.0)
@@ -168,6 +193,62 @@ struct GeneratorView: View {
                     
                 }
             }
+            
+            //MARK: Button "SAVE"
+            VStack {
+               
+                
+                Button(action: {
+                    
+                },label: {
+                    ZStack{
+                        Image("Warning")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(15.0)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15.0)
+                                    .stroke(Color("SaveButtonBorder"), lineWidth: 2)
+                            )
+                        
+                        
+                        HStack (spacing: 37){
+                            
+                            Text("S")
+                                .foregroundColor(Color("SaveButtonText"))
+                                .font(.title)
+                                .bold()
+                            
+                          
+                            
+                            Text("A")
+                                .foregroundColor(Color.black)
+                                .font(.title)
+                                .bold()
+                            
+                          
+                            Text("V")
+                                .foregroundColor(Color("SaveButtonText"))
+                                .font(.title)
+                                .bold()
+                            
+
+                            
+                            Text("E")
+                                .foregroundColor(Color.black)
+                                .font(.title)
+                                .bold()
+                        }
+                        .padding(.horizontal, 20)
+                    }
+                })
+                    
+                
+                       
+                  
+
+            }
+            .padding(.all, 50.0)
             
         }
     }

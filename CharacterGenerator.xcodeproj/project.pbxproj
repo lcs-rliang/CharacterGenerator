@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C423D5A2A338312002A8BC6 /* SavedSheetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C423D592A338312002A8BC6 /* SavedSheetsView.swift */; };
 		4C9ACD462A2918E900E3B737 /* CharacterGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9ACD452A2918E900E3B737 /* CharacterGeneratorApp.swift */; };
 		4C9ACD4A2A2918EB00E3B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9ACD492A2918EB00E3B737 /* Assets.xcassets */; };
 		4C9ACD4D2A2918EB00E3B737 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9ACD4C2A2918EB00E3B737 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C423D592A338312002A8BC6 /* SavedSheetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSheetsView.swift; sourceTree = "<group>"; };
 		4C9ACD422A2918E900E3B737 /* CharacterGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharacterGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9ACD452A2918E900E3B737 /* CharacterGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGeneratorApp.swift; sourceTree = "<group>"; };
 		4C9ACD492A2918EB00E3B737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				4CCB27252A32A8A800D06C9F /* CharacteristicRowView2.swift */,
 				4CCB272A2A33557800D06C9F /* StatusRowView.swift */,
 				4CCB272C2A33575700D06C9F /* SanityRowView.swift */,
+				4C423D592A338312002A8BC6 /* SavedSheetsView.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -189,6 +192,7 @@
 				4C9ACD552A29192500E3B737 /* HomeView.swift in Sources */,
 				4C9ACD462A2918E900E3B737 /* CharacterGeneratorApp.swift in Sources */,
 				4CCB27292A32AD7A00D06C9F /* TitleVIew.swift in Sources */,
+				4C423D5A2A338312002A8BC6 /* SavedSheetsView.swift in Sources */,
 				4CCB272B2A33557800D06C9F /* StatusRowView.swift in Sources */,
 				4C9ACD592A29255600E3B737 /* InformationRowView.swift in Sources */,
 				4CB929A52A296A05002C2EC8 /* CharacteristicRowView.swift in Sources */,
