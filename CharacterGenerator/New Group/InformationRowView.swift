@@ -13,19 +13,23 @@ struct InformationRowView: View {
     
     
     let text: String
+    let defaultText: String
+    let inputText: String
+    
     //    let name = String
     //
     //
     //
     //
-    //    @State var inputName = name
-    //    @State var inputPlayer = ""
-    //    @State var inputOccupation = ""
-    //    @State var inputEra = ""
-    //    @State var inputAge = ""
-    //    @State var inputSex = ""
-    //    @State var inputResidence = ""
-    //    @State var inputBirthplace = ""
+//        @State var inputText = inputText
+        @State var name = ""
+        @State var player = ""
+        @State var occupation = ""
+        @State var era = ""
+        @State var age = ""
+        @State var sex = ""
+        @State var residence = ""
+        @State var birthplace = ""
     
     //MARK: Computed Properties
     
@@ -40,6 +44,8 @@ struct InformationRowView: View {
                     .padding(.all, 10.0)
                 
                 Spacer()
+                
+                TextField("\(defaultText)", text: $name)
             }
             
             //            TextField(text, text: $inputName)
@@ -53,6 +59,8 @@ struct InformationRowView: View {
 
 struct InformationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationRowView(text: "Name: ")
+        InformationRowView(text: "Name: ",
+                           defaultText: "nope",
+                           inputText: "nah")
     }
 }

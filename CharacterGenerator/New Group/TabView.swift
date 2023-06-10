@@ -20,8 +20,10 @@ struct TabberView: View {
                           era: "1920s",
                           age: "42",
                           sex: "Male",
-                          Residence: "New Jersey",
-                          Birthplace: "Louisiana")
+                          pronoun:"he",
+                          residence: "New Jersey",
+                          birthplace: "Louisiana")
+            
                 .tabItem {
                     if self.selectedTab == 0 {
                         Image(systemName: "tablecells")

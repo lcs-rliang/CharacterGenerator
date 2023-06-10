@@ -107,16 +107,16 @@
 		4C9ACD532A29190000E3B737 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C423D5B2A338523002A8BC6 /* TabView.swift */,
 				4C9ACD542A29192500E3B737 /* HomeView.swift */,
 				4C9ACD562A29195800E3B737 /* GeneratorView.swift */,
+				4C423D592A338312002A8BC6 /* SavedSheetsView.swift */,
 				4CCB27282A32AD7A00D06C9F /* TitleVIew.swift */,
 				4C9ACD582A29255600E3B737 /* InformationRowView.swift */,
 				4CB929A42A296A05002C2EC8 /* CharacteristicRowView.swift */,
 				4CCB27252A32A8A800D06C9F /* CharacteristicRowView2.swift */,
 				4CCB272A2A33557800D06C9F /* StatusRowView.swift */,
 				4CCB272C2A33575700D06C9F /* SanityRowView.swift */,
-				4C423D592A338312002A8BC6 /* SavedSheetsView.swift */,
-				4C423D5B2A338523002A8BC6 /* TabView.swift */,
 			);
 			name = Views;
 			path = "New Group";

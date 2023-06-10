@@ -17,8 +17,9 @@ struct CharacterGeneratorApp: App {
                           era: "1920s",
                           age: "42",
                           sex: "Male",
-                          Residence: "New Jersey",
-                          Birthplace: "Louisiana")
+                          pronoun: "he",
+                          residence: "New Jersey",
+                          birthplace: "Louisiana")
             
                 .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
